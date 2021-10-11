@@ -24,6 +24,9 @@ def ingresar():
 @app.route('/categorias')
 def categorias():
     return render_template('categorias/consulta.html')
+@app.route('/consulta')
+def consulta():
+    return render_template('usuarios/consulta.html')
 
 @app.route('/categorias/nuevo')
 def nuevaCategoria():
@@ -36,6 +39,7 @@ def editarCategoria():
 @app.route('/agregar/cuenta')
 def agregarUsuario():
     return render_template('usuarios/agregar.html')
+
 # fin de la seccion de categorias
 if __name__=='__main__':
     app.run(debug=True)
