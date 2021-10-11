@@ -17,6 +17,10 @@ def login():
     email=request.form['email']
     return 'Validando la cuenta de usuario:'+email
 
+@app.route('/usuarios/Eliminar')
+def Eliminar():
+    return render_template('/usuarios/Eliminar.html')
+
 @app.route('/usuarios/ingresar')
 def ingresar():
     return render_template('usuarios/login.html')
