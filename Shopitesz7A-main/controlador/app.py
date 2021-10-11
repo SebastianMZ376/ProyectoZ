@@ -36,6 +36,10 @@ def consulta():
 def nuevaCategoria():
     return render_template('categorias/nuevo.html')
 
+@app.route('/Editar')
+def Editar():
+    return render_template('Usuarios/Editar.html')
+
 @app.route('/categorias/editar')
 def editarCategoria():
     return render_template('categorias/editar.html')
