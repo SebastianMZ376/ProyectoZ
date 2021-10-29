@@ -5,6 +5,10 @@ app = Flask(__name__, template_folder='../vista',static_folder='../static')
 def main():
     return render_template('comunes/index.html')
 
+@app.route('/Carrito')
+def Carrito():
+    return render_template('/Carrito/Carrito.html')
+
 @app.route('/Usuarios')
 def user():
     return render_template('/Usuarios/usuarios.html')
