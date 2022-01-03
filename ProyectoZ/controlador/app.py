@@ -1,5 +1,11 @@
 from flask import Flask,render_template
+from modelo.dao import db
+
 app = Flask(__name__, template_folder='../vista',static_folder='../static')
+
+app.config['SQLALCHEMY_DATABASE_URI']='mysql+pymysql://root:@localhost/quicksnack'
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS']=False
+
 
 @app.route('/')
 def main():
@@ -45,5 +51,9 @@ def editarcuenta():
 def user():
     return render_template('/Usuarios/usuarios.html')
 if __name__ == '__main__':
+
+    db.init_app(app)  # Inicializar la BD - pasar la configuración de la url de la BD
+
     app.run(debug=True)
+
 

@@ -6,12 +6,24 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!--<link rel="stylesheet" type="text/css" href="stylos.css">-->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
+
     <title>Document</title>
 </head>
 <body>
-<!-- Nav tabs -->
-  <nav class="navbar navbar-expand-sm bg-secondary navbar-dark">
+<!-- Nav tabs
+  <div class="page">
+  <nav class="page__menu menu">
+    <ul class="menu__list r-list">
+      <li class="menu__group"><a href="/Usuarios" class="menu__link r-link text-underlined">Usuarios</a></li>
+      <li class="menu__group"><a href="/Carrito" class="menu__link r-link text-underlined">Carrito</a></li>
+      <li class="menu__group"><a href="/indexx" class="menu__link r-link text-underlined">Pedidos</a></li>
+      <li class="menu__group"><a href="/Categorias" class="menu__link r-link text-underlined">Categorias</a></li>
+    </ul>
+  </nav>
+-->
+  <nav class="navbar navbar-expand-sm bg-secondary navbar-dark fixed-center">
   <div class="container-fluid">
     <ul class="navbar-nav">
       <li class="nav-item">
@@ -29,9 +41,54 @@
     </ul>
   </div>
 </nav>
+<br><br><br>
+    <!-- Carousel -->
+<div id="demo" class="carousel slide" data-bs-ride="carousel">
 
+  <!-- Indicators/dots -->
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+    <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+    <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+    <button type="button" data-bs-target="#demo" data-bs-slide-to="3"></button>
+    <button type="button" data-bs-target="#demo" data-bs-slide-to="4"></button>
+
+  </div>
+
+  <!-- The slideshow/carousel -->
+  <div align="center">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="{{url_for('static',filename='img/tortas.jpg')}}" alt="torta" class="w-90" height="450">
+    </div>
+    <div class="carousel-item">
+     <img src="{{url_for('static',filename='img/burritos.png')}}" alt="burritos" class="w-90" height="450">
+    </div>
+    <div class="carousel-item">
+     <img src="{{url_for('static',filename='img/guisados.jpg')}}" alt="guisados" class="w-90" height="450">
+    </div>
+    <div class="carousel-item">
+     <img src="{{url_for('static',filename='img/gringas.jpg')}}" alt="gringas" class="w-90" height="450">
+    </div>
+    <div class="carousel-item">
+      <img src="{{url_for('static',filename='img/hampapas.jpg')}}" alt="hamburguesaWpapas" class="w-90" height="450">
+    </div>
+  </div>
+  </div>
+  <!-- Left and right controls/icons -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
+</div>
 
 
 
 </body>
+<footer>
+
+
+</footer>
 </html>
